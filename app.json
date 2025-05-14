@@ -19,7 +19,7 @@
       "package": "com.tjupp.eastest",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#d3d3d3"
       },
       "edgeToEdgeEnabled": true
     },
@@ -37,6 +37,35 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Abel-Regular.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Abel",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/Abel-Regular.ttf",
+                    "weight": 700,
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Abel-Regular.ttf",
+                    "weight": 700
+                  }
+                ]
+              }
+            ]
+          },
+          "ios": {
+            "fonts": ["./assets/fonts/Abel-Regular.ttf"]
+          }
         }
       ]
     ],
