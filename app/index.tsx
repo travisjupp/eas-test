@@ -2,10 +2,40 @@ import * as React from "react";
 import { View, AppRegistry } from "react-native";
 import { configureFonts, Card, Text, Button, MD3LightTheme, MD3DarkTheme as DefaultTheme, PaperProvider } from "react-native-paper";
 import data from "../app.json" with { type: 'json' };
+import { useFonts } from 'expo-font';
+
 const appName = data.expo.name;
 
 const fontConfig = {
-  fontFamily: 'Abel'
+  fontFamily: 'Abel',
+  ios: {
+        regular: {
+          fontFamily: 'Abel', // Your custom font
+          fontWeight: 'normal',
+        },
+        medium: {
+          fontFamily: 'Abel',
+          fontWeight: '500',
+        },
+        bold: {
+          fontFamily: 'Abel',
+          fontWeight: '700',
+        },
+      },
+      android: {
+        regular: {
+          fontFamily: 'Abel', // Your custom font
+          fontWeight: 'normal',
+        },
+        medium: {
+          fontFamily: 'Abel',
+          fontWeight: '500',
+        },
+        bold: {
+          fontFamily: 'Abel',
+          fontWeight: '700',
+        },
+      },
 };
 
 const theme = {
@@ -23,6 +53,9 @@ const theme = {
 /* and call in component body: const theme = useTheme(); */
 
 export default function Index() {
+const [fontsLoaded] = useFonts({
+    'Abel': require('../assets/fonts/Abel-Regular.ttf'),
+          });
   return (
     <PaperProvider theme={theme}>
       <View
